@@ -1,28 +1,33 @@
-# ANKER – Stabilisationsachse · iki1uc
+# UN · Eigenständige NC-Achse · Stabilisationskern
 
-## Zweck
-ANKER ist die Stabilisationsachse des iki1uc‑Systems.
-Es hält die Achsen IQ, QI, EVO, UPD, UPG, BIOS und CALC im korrekten Verhältnis.
+UN ist eine eigenständige Achse im NC-System.  
+Sie besitzt eigene Berechnungen, eigene Stabilität und eigene Ergebnisse.
 
-## Struktur
-- NAME: ANKER
-- ID: A01
-- Station: S01
-- Dimension: D4
-- Modus: erabel (neutral, operation möglich)
+──────────────────────────────────────────────
+## 🔹 UN-Achsen
 
-## Rolle
-ANKER stabilisiert, ohne selbst aktiv zu berechnen oder zu steuern.
-Es ist die neutrale Achse zwischen AXI, 6d und API.
+- **alpha** – Eingangswert
+- **beta** – Gegenwert
+- **gamma** – Differenzachse
+- **unity** – Summenachse
+- **stabil** – Stabilisationsachse (UN_ANCHOR)
 
-## Bindungen
-- AXI
-- 6d
-- 360
-- 100
-- 213 (REAL)
-- API
+──────────────────────────────────────────────
+## 🔹 Dateien
 
-## Status
-STATE = STABIL  
-READY = 100%
+- `UN.core.js` – Hauptengine
+- `UN.anker.js` – Stabilisationsachse
+- `UN.result.json` – Ergebnis-Pool
+- `index.html` – Geometrie + Berechnung
+- `id.html` – ID-Stempel
+
+──────────────────────────────────────────────
+## 🔹 Zweck
+
+UN dient als Basisachse für:
+
+- Stabilität
+- Differenz
+- Summenbildung
+- NC-Routing
+- Geometrische Darstellung
