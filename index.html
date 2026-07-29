@@ -11,6 +11,7 @@ h1{color:#0f0;margin-bottom:30px;letter-spacing:3px;}
 .title{color:#6cf;font-size:20px;margin-bottom:10px;}
 a{color:#6cf;text-decoration:none;}
 pre{background:#000;border-left:3px solid #6cf;padding:12px;white-space:pre-wrap;}
+button{background:#111;color:#0f0;border:1px solid #333;padding:8px 16px;margin-top:10px;}
 </style>
 </head>
 
@@ -19,9 +20,8 @@ pre{background:#000;border-left:3px solid #6cf;padding:12px;white-space:pre-wrap
 <h1>UN · Basisachse</h1>
 
 <div class="block">
-    <div class="title">UN – Kern</div>
+    <div class="title">Kern</div>
     <p>UN ist die Basisachse des iki1uc‑Systems.</p>
-    <p>Sie bleibt bewusst klein, stabil und klar.</p>
 </div>
 
 <div class="block">
@@ -30,15 +30,33 @@ pre{background:#000;border-left:3px solid #6cf;padding:12px;white-space:pre-wrap
 </div>
 
 <div class="block">
-    <div class="title">UN‑Status</div>
+    <div class="title">Status</div>
     <pre>
-UN.alpha  = 0
-UN.beta   = 0
-UN.gamma  = 0
-UN.unity  = 0
-UN.stabil = 0
+alpha  = 0
+beta   = 0
+gamma  = 0
+unity  = 0
+stabil = 0
     </pre>
 </div>
+
+<div class="block">
+    <div class="title">Response</div>
+    <button onclick="run()">RESPO</button>
+    <pre id="out">Bereit...</pre>
+</div>
+
+<script>
+function run(){
+    const respo = {
+        layer: "UN",
+        mode: "WHIRL_UN",
+        state: "ok",
+        time: Date.now()
+    };
+    out.textContent = JSON.stringify(respo, null, 2);
+}
+</script>
 
 <div class="block">
     <div class="title">Dokumentation</div>
